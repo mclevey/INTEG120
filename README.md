@@ -1,4 +1,6 @@
-# INTEG 120 Lecture Slides
+INTEG 120 Lecture Slides
+
+# The Art & Science of Learning
 
 Dr. John McLevey   
 Knowledge Integration (KI)    
