@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/mclevey.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-video='media/iceland-aerial-view-breathtaking-aerial-view-lan-2021-11-16-16-49-50-utc.mp4'
+				         data-background-opacity='0.3'
+				         data-background-video-muted='true'
+				         data-background-video-loop='true'> 
+					<em>the art and science of</em>
+					<h2 class="r-fit-text">Learning</h2>
+					<small>Dr. John McLevey<br>KI, Faculty of Environment<br>University of Waterloo</small>
+				</section>
+
+				<section data-markdown>
+					Follow the video tutorial. 😀    
+
+					`~/Movies/Mastering Reveal-js Course`
+				</section>
+
+
+				<section>
+					<section data-background-color='salmon'>
+						<h1>Backgrounds</h1>
+						<p><small>We can do <strong>so much</strong> with image backgrounds...</small></p>
+					</section>
+
+					<section data-background-image='media/pawan-thapa-jnGd86EhT_A-unsplash.jpg'>
+						<h1>Backgrounds</h1>
+						<p><small>We can do <strong>so much</strong> with image backgrounds...</small></p>
+					</section>
+
+					<section data-background-image='media/pawan-thapa-jnGd86EhT_A-unsplash.jpg'
+					         data-background-opacity='0.3'>
+						<h1>Backgrounds</h1>
+						<p><small>We can do <strong>so much</strong> with image backgrounds...</small></p>
+					</section>
+
+					<section data-background-image='media/pawan-thapa-jnGd86EhT_A-unsplash.jpg'
+				             data-background-opacity='0.3'
+				             data-background-color='salmon'> 
+						<h1>Backgrounds</h1>
+						<p><small>We can do <strong>so much</strong> with image backgrounds...</small></p>
+					</section>
+					
+					<section data-background-image='media/pawan-thapa-jnGd86EhT_A-unsplash.jpg'
+				             data-background-opacity='0.3'
+				             data-background-color='indigo'> 
+						<h1>Backgrounds</h1>
+						<p><small>We can do <strong>so much</strong> with image backgrounds...</small></p>
+					</section>
+
+					
+					<section data-background-image='media/pawan-thapa-jnGd86EhT_A-unsplash.jpg'
+					         data-background-opacity='0.3'
+					         data-background-color='black'>
+						<h1>Backgrounds</h1>
+						<p><small>We can do <strong>so much</strong> with image backgrounds...</small></p>
+					</section>
+
+				<section data-background-image='media/valeriia-neganova-amGWl275tC0-unsplash.jpg'
+				         data-background-opacity='0.6'> 
+					<h3>FILL</h3>
+					<p><small>with zoom</small></p>
+				</section>
+
+				<section data-background-image='media/valeriia-neganova-amGWl275tC0-unsplash.jpg'
+				         data-background-opacity='0.6'
+				         data-background-size='contain'> 
+					<h3>CONTAIN</h3>
+					<p><small>letterbox style</small></p>
+				</section>
+
+				</section>
+
+				<section>
+					<section><h1>Videos</h1></section>
+					
+					<section data-background-video='media/1.Half Kneeling Hip Flexor Stretch.mp4'>
+					 <!-- Just video with no text. -->
+					</section>
+
+					<section data-background-video='media/1.Half Kneeling Hip Flexor Stretch.mp4'
+					         data-background-opacity='0.3'>
+						<p>You can still dim the video and add some text.</p>
+					</section>
+				</section>
+				
+				<section>
+					<section><h1>iframes</h1></section>
+					
+					<section data-background-iframe='http://www.johnmclevey.com'
+				             data-background-opacity='0.2'>
+						<h1>iframes</h1>
+					</section>
+
+					<section data-background-iframe='http://www.johnmclevey.com'>
+						<!-- No text, interactive by default -->
+					</section>
+			
+					<!-- 
+					<section data-background-iframe='http://www.johnmclevey.com'
+					         data-background-opacity='0.2' data-background-interactive>
+						<h1>iframes</h1>
+						<p>With an interactive background.</p>
+					</section>
+	 				-->
+
+
+					<section data-background-iframe='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92457.00527481548!2d1.3628028867538662!3d43.60068187106541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb6fec7552ff%3A0x406f69c2f411030!2sToulouse%2C%20France!5e0!3m2!1sen!2sca!4v1677946839628!5m2!1sen!2sca'
+				             data-preload>
+						<!-- To get this, look up the location in Google maps, then share it, embedd it, copy and paste the EMBED iframe, and then extract the URL to put into the section -->
+					</section>
+				</section>
+				
+				<section>
+					<section><h1>Code</h1></section>
+
+					<section>
+						<p><small>🧐 🧐 🧐<br>Let's take another look at our Bayesian model.</small></p>
+						<pre><code data-line-numbers data-trim class='python'>
+							with pm.Model() as partial_pool_model:
+								# Hyperpriors
+								alpha_mu = pm.Normal("alpha_mu", mu=1, sigma=2)
+								beta_mu = pm.Normal("beta_mu", mu=1, sigma=2)
+								alpha_sigma = pm.Exponential("alpha_sigma", 1)
+								beta_sigma = pm.Exponential("beta_sigma", 1)
+								
+								# Priors
+								alpha = pm.Normal("alpha", mu=alpha_mu, sigma=alpha_sigma, shape=n_states)
+								beta = pm.Normal("beta", mu=beta_mu, sigma=beta_sigma, shape=n_states)
+								sigma = pm.Exponential("sigma", 2)
+								
+								# Linear Model
+								mu = alpha[state_idx] + (beta[state_idx]*spend_std)
+								
+								# Likelihood
+								votes = pm.Normal("votes", mu=mu, sigma=sigma, observed=vote_std)
+						</code></pre>
+					</section>
+
+					<section>
+						<p>Let's highlight the hyperparameters in lines 3-6.<br>Note the other lines are dimmed a bit.</p>
+						<pre><code data-line-numbers="3-6" data-trim class='python'>
+							with pm.Model() as partial_pool_model:
+								# Hyperpriors
+								alpha_mu = pm.Normal("alpha_mu", mu=1, sigma=2)
+								beta_mu = pm.Normal("beta_mu", mu=1, sigma=2)
+								alpha_sigma = pm.Exponential("alpha_sigma", 1)
+								beta_sigma = pm.Exponential("beta_sigma", 1)
+								
+								# Priors
+								alpha = pm.Normal("alpha", mu=alpha_mu, sigma=alpha_sigma, shape=n_states)
+								beta = pm.Normal("beta", mu=beta_mu, sigma=beta_sigma, shape=n_states)
+								sigma = pm.Exponential("sigma", 2)
+								
+								# Linear Model
+								mu = alpha[state_idx] + (beta[state_idx]*spend_std)
+								
+								# Likelihood
+								votes = pm.Normal("votes", mu=mu, sigma=sigma, observed=vote_std)
+						</code></pre>
+					</section>
+				
+					<section>
+						<p>We can step through different highlight groups.<br><small>Note that it automatically scrolls through the code!</small></p>
+						<pre><code data-line-numbers="1|3-6|9-11|14|17" data-trim class='python'>
+							with pm.Model() as partial_pool_model:
+								# Hyperpriors
+								alpha_mu = pm.Normal("alpha_mu", mu=1, sigma=2)
+								beta_mu = pm.Normal("beta_mu", mu=1, sigma=2)
+								alpha_sigma = pm.Exponential("alpha_sigma", 1)
+								beta_sigma = pm.Exponential("beta_sigma", 1)
+								
+								# Priors
+								alpha = pm.Normal("alpha", mu=alpha_mu, sigma=alpha_sigma, shape=n_states)
+								beta = pm.Normal("beta", mu=beta_mu, sigma=beta_sigma, shape=n_states)
+								sigma = pm.Exponential("sigma", 2)
+								
+								# Linear Model
+								mu = alpha[state_idx] + (beta[state_idx]*spend_std)
+								
+								# Likelihood
+								votes = pm.Normal("votes", mu=mu, sigma=sigma, observed=vote_std)
+						</code></pre>
+					</section>
+
+					<section data-markdown>
+						We can do the same stuff with markdown slides.
+
+						```python
+						lets_pick_a_range = 10
+
+						for i in range(lets_pick_a_range):
+							print(i)
+
+						print('HOLY COW THIS SHIT IS COOL')
+						```
+					</section>
+
+					<section data-markdown>
+						With line numbers... 
+
+						```python []
+						lets_pick_a_range = 10
+
+						for i in range(lets_pick_a_range):
+							print(i)
+
+						print('HOLY COW THIS SHIT IS COOL')
+						```
+					</section>
+
+					<section data-markdown>
+						With emphasizing some lines and dimming others... 
+
+						```python [1|3,4|6]
+						lets_pick_a_range = 10
+
+						for i in range(lets_pick_a_range):
+							print(i)
+
+						print('HOLY COW THIS SHIT IS COOL')
+						```
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Code Animations</h1>
+					</section>
+
+					<section data-auto-animate>
+						<pre data-id="animate"><code data-line-numbers data-trim class='python'>
+							with pm.Model() as partial_pool_model:
+								# Hyperpriors
+								# Priors
+								# Linear Model
+								# Likelihood
+						</code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<pre data-id="animate"><code data-line-numbers data-trim class='python'>
+							with pm.Model() as partial_pool_model:
+								# Hyperpriors
+								alpha_mu = pm.Normal("alpha_mu", mu=1, sigma=2)
+								beta_mu = pm.Normal("beta_mu", mu=1, sigma=2)
+								alpha_sigma = pm.Exponential("alpha_sigma", 1)
+								beta_sigma = pm.Exponential("beta_sigma", 1)
+								# Priors
+								# Linear Model
+								# Likelihood
+						</code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<pre data-id="animate"><code data-line-numbers data-trim class='python'>
+							with pm.Model() as partial_pool_model:
+								# Hyperpriors
+								alpha_mu = pm.Normal("alpha_mu", mu=1, sigma=2)
+								beta_mu = pm.Normal("beta_mu", mu=1, sigma=2)
+								alpha_sigma = pm.Exponential("alpha_sigma", 1)
+								beta_sigma = pm.Exponential("beta_sigma", 1)
+								# Priors
+								alpha = pm.Normal("alpha", mu=alpha_mu, sigma=alpha_sigma, shape=n_states)
+								beta = pm.Normal("beta", mu=beta_mu, sigma=beta_sigma, shape=n_states)
+								sigma = pm.Exponential("sigma", 2)
+								# Linear Model
+								# Likelihood
+						</code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<pre data-id="animate"><code data-line-numbers data-trim class='python'>
+							with pm.Model() as partial_pool_model:
+								# Hyperpriors
+								alpha_mu = pm.Normal("alpha_mu", mu=1, sigma=2)
+								beta_mu = pm.Normal("beta_mu", mu=1, sigma=2)
+								alpha_sigma = pm.Exponential("alpha_sigma", 1)
+								beta_sigma = pm.Exponential("beta_sigma", 1)
+								# Priors
+								alpha = pm.Normal("alpha", mu=alpha_mu, sigma=alpha_sigma, shape=n_states)
+								beta = pm.Normal("beta", mu=beta_mu, sigma=beta_sigma, shape=n_states)
+								sigma = pm.Exponential("sigma", 2)
+								# Linear Model
+								mu = alpha[state_idx] + (beta[state_idx]*spend_std)
+								# Likelihood
+						</code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<pre data-id="animate"><code data-line-numbers data-trim class='python'>
+							with pm.Model() as partial_pool_model:
+								# Hyperpriors
+								alpha_mu = pm.Normal("alpha_mu", mu=1, sigma=2)
+								beta_mu = pm.Normal("beta_mu", mu=1, sigma=2)
+								alpha_sigma = pm.Exponential("alpha_sigma", 1)
+								beta_sigma = pm.Exponential("beta_sigma", 1)
+								# Priors
+								alpha = pm.Normal("alpha", mu=alpha_mu, sigma=alpha_sigma, shape=n_states)
+								beta = pm.Normal("beta", mu=beta_mu, sigma=beta_sigma, shape=n_states)
+								sigma = pm.Exponential("sigma", 2)
+								# Linear Model
+								mu = alpha[state_idx] + (beta[state_idx]*spend_std)
+								# Likelihood
+								votes = pm.Normal("votes", mu=mu, sigma=sigma, observed=vote_std)
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section><h1>Fragments</h1></section>
+					
+					<section data-background-color='indigo'>
+						<p>The full list.</p>
+						<ul>
+							<li>first item</li> 
+							<li>second item</li>
+							<li>third item</li>
+							<li>fourth item</li>
+							<li>fifth item</li>
+							<li>sixth item</li>
+						</ul>
+					</section>
+					
+					<section data-background-color='indigo'>
+						<p>Using default fragment style (fade in).</p>
+						<ul>
+							<li class='fragment'>first item</li>
+							<li class='fragment'>second item</li>
+							<li class='fragment'>third item</li>
+							<li class='fragment'>fourth item</li>
+							<li class='fragment'>fifth item</li>
+							<li class='fragment'>sixth item</li>
+						</ul>
+					</section>
+					
+					<section data-background-color='indigo'>
+						<p>Using fragment style: strike.</p>
+						<ul>
+							<li class='fragment strike'>first item</li>
+							<li class='fragment strike'>second item</li>
+							<li class='fragment strike'>third item</li>
+							<li class='fragment strike'>fourth item</li>
+							<li class='fragment strike'>fifth item</li>
+							<li class='fragment strike'>sixth item</li>
+						</ul>
+					</section>
+					
+					<section data-background-color='indigo'>
+						<p>Using fragment style: fade-left .</p>
+						<ul>
+							<li class='fragment fade-left'>first item</li>
+							<li class='fragment fade-left'>second item</li>
+							<li class='fragment fade-left'>third item</li>
+							<li class='fragment fade-left'>fourth item</li>
+							<li class='fragment fade-left'>fifth item</li>
+							<li class='fragment fade-left'>sixth item</li>
+						</ul>
+					</section>
+					
+					<section>
+						<p>We can also highlight blocks of text using fragments.</p>
+						<p><small>Lorem ipsum dolor sit amet, <span class='fragment highlight-blue'>consectetur adipisicing elit</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat <span class='fragment highlight-blue'>nulla pariatur</span>. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim <span class='fragment highlight-blue'>id est laborum</span>.</small></p> 
+					</section>
+				</section>
+
+				<section>
+					<section><h1>Auto-Animate</h1></section>
+
+					<section data-auto-animate>
+						<!-- Let's move the title a bit by changing the top margin... -->
+						<h1 style='margin-top: 100px;'>Auto-Animate</h1>
+					</section>
+
+					<section data-auto-animate>
+						<h1>Auto-Animate</h1>
+						<p>Is the best.</p>
+						<p>Like, it really is pretty cool.</p>
+					</section>
+
+					<section data-auto-animate>
+						<h1>Auto-Animate</h1>
+					</section>
+
+					<section data-auto-animate>
+						<div class='r-hstack'>
+							<p style="background: salmon; padding: 1em;">1</p>
+							<p style="background: indigo; padding: 1em;">2</p>
+							<p style="background: pink; padding: 1em;">3</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class='r-vstack items-start'>
+							<p style="background: salmon; padding: 1em;">1</p>
+							<p style="background: indigo; padding: 1em;">2</p>
+							<p style="background: pink; padding: 1em;">3</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class='r-vstack items-end'>
+							<p style="background: salmon; padding: 1em;">1</p>
+							<p style="background: indigo; padding: 1em;">2</p>
+							<p style="background: pink; padding: 1em;">3</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class='r-hstack'>
+							<p data-auto-animate-duration='1' style="background: salmon; padding: 1em;">1</p>
+							<p data-auto-animate-duration='1.5' style="background: indigo; padding: 1em;">2</p>
+							<p data-auto-animate-duration='2' style="background: pink; padding: 1em;">3</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div data-id='rect' style="background: salmon; width: 50px; height: 50px;"></div>
+					</section>
+
+					<section data-auto-animate>
+						<div data-id='rect' style="background: salmon; width: 250px; height: 250px;"></div>
+					</section>
+
+					<section data-auto-animate>
+						<ul>
+							<li>Austin</li>
+							<li>Toronto</li>
+							<li>Waterloo</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li>St. John's</li>
+							<li>Austin</li>
+							<li>Toronto</li>
+							<li>Hamilton</li>
+							<li>Waterloo</li>
+							<li>Kitchener</li>
+						</ul>
+					</section>
+
+					<section><p>You can do SO MUCH more.<br>See Hakim's video.</p></section>
+				</section>
+
+				<section>
+					<section><h1>External Markdown Content</h1></section>
+					<section data-markdown='module-01.md'></section>
+					<section data-markdown='module-02.md'></section>
+					<section data-markdown='module-03.md'></section>
+					<section data-markdown='module-04.md'></section>
+					<section data-markdown='module-05.md'></section>
+					<section data-markdown='module-06.md'></section>
+					<section data-markdown='module-07.md'></section>
+					<section data-markdown='module-08.md'></section>
+					<section data-markdown='module-09.md'></section>
+					<section data-markdown='module-10.md'></section>
+					<section data-markdown='module-11.md'></section>
+					<section data-markdown='module-12.md'></section>
+					<section data-markdown='module-A01.md'></section>
+					<section data-markdown='module-A02.md'></section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				progress: false,
+				controls: true,
+				markdown: { smartypants: true },
+				transition: 'slide',
+
+				// The line below changes the easing equation used in autoanimations 
+				// You can change this and tweak it in all kinds of ways, sky is the limit.
+				// comment it out for default behavior. 
+
+				// autoAnimateEasing: 'cubic-bezier(0.83, 0, 0.17, 1)',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
