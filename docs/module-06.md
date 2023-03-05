@@ -1,9 +1,9 @@
-# Module 6
+Memory Systems
 
 ---
 
-Learning Objectives
+Recall, Spaced Repitition, etc.
 
-1. first
-2. second
-2. third
+---
+
+The Forgetting Curve

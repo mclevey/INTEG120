@@ -1,9 +1,9 @@
-# Module 8
+### James Clear's Work
 
 ---
 
-Learning Objectives
+### Habits and Automatic Cognition
 
-1. first
-2. second
-2. third
+---
+
+### Breaking and Forming Habits

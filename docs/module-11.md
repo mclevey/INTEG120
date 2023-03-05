@@ -1,9 +1,9 @@
-# Module 11
+### Ineffective Strategies
 
 ---
 
-Learning Objectives
+### The Dunning-Kruger Effect
 
-1. first
-2. second
-2. third
+---
+
+### The Knowledge Illusion

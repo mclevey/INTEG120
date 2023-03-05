@@ -1,9 +1,9 @@
-# Module 4
+Diversity and Distributed Cognition
 
 ---
 
-Learning Objectives
+Neurodiversity
 
-1. first
-2. second
-2. third
+---
+
+ADHD

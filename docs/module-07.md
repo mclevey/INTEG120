@@ -1,9 +1,16 @@
-# Module 7
+The Default Mode Network
+
+- Reference psychadelics research, depression and anxiety, stuck in thought patterns, etc. 
 
 ---
 
-Learning Objectives
+Rest and Sleep
 
-1. first
-2. second
-2. third
+- Peng book *Rest*?
+- Creativity, etc. 
+
+---
+
+Movement and Exercise
+
+- Call back to AMP Extended Mind

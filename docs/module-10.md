@@ -1,9 +1,19 @@
-# Module 10
+### Learning at the Population Level
 
 ---
 
-Learning Objectives
+### Distributed Cognition and Collective Intelligence
 
-1. first
-2. second
-2. third
+---
+
+### Polarization, Echo Chambers, etc. 
+
+---
+
+### More Complex Threshold Models
+
+---
+
+### Back to Mindsets
+
+Orientation towards the network; learning versus performance, etc.

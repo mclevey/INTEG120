@@ -1,9 +1,13 @@
-# Module 9
+### Social Learning 101
 
 ---
 
-Learning Objectives
+### Two Perspectives: Cohesion and Equivalence
 
-1. first
-2. second
-2. third
+---
+
+### Simple and Complex Contagions
+
+---
+
+### Complexity and Threshold Models
